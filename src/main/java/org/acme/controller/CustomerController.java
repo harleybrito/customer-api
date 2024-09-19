@@ -23,7 +23,8 @@ public class CustomerController {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public CustomerDTO findCustomer(@QueryParam("id") Long id) {
+    @Path("/{id}")
+    public CustomerDTO findCustomer(@PathParam("id") Long id) {
         return this.customerService.findCustomerById(id);
     }
 
