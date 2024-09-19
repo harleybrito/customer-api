@@ -47,6 +47,7 @@ public class CustomerService {
 
     private CustomerDTO mapCustomerEntityToDTO(CustomerEntity customer) {
         CustomerDTO customerDTO = new CustomerDTO();
+        customerDTO.setId(customer.getId());
         customerDTO.setAddress(customer.getAddress());
         customerDTO.setName(customer.getName());
         customerDTO.setEmail(customer.getEmail());
