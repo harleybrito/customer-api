@@ -21,6 +21,12 @@ public class CustomerController {
         return this.customerService.findAllCustomers();
     }
 
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public CustomerDTO findCustomer(@QueryParam("id") Long id) {
+        return this.customerService.findCustomerById(id);
+    }
+
     @POST
     @Transactional
     public Response saveCustomer(CustomerDTO customerDTO) {
